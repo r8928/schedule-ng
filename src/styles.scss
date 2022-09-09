@@ -6,3 +6,41 @@ $border-radius: 0.5rem;
 $font-family-sans-serif: "Fredoka";
 
 @import "../node_modules/bootstrap/scss/bootstrap";
+
+.main-container {
+  display: flex;
+  padding: 1rem 0.5rem;
+  @include media-breakpoint-up(md) {
+    padding: 1rem;
+  }
+}
+
+.main-nav {
+  margin-right: 1rem;
+
+  .nav-title {
+    display: none;
+  }
+
+  .nav-link {
+    text-align: left;
+  }
+
+  @include media-breakpoint-up(md) {
+    width: 350px;
+
+    .nav-title {
+      display: initial;
+    }
+
+    i {
+      margin-right: 0.5rem;
+    }
+  }
+}
+
+.main-content {
+  flex-grow: 1;
+  padding: 1rem;
+  background-color: white;
+}
