@@ -44,3 +44,14 @@ $font-family-sans-serif: "Fredoka";
   padding: 1rem;
   background-color: white;
 }
+
+.tools-flex {
+  display: flex;
+  gap: 0.25rem;
+  flex-wrap: wrap;
+  margin: 0.5rem 0;
+
+  &.end {
+    justify-content: flex-end;
+  }
+}

@@ -11,19 +11,25 @@
 
     <ul class="nav nav-pills nav-fill flex-column">
       <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">
+        <a
+          class="nav-link"
+          aria-current="page"
+          routerLink="/"
+          routerLinkActive="active"
+          [routerLinkActiveOptions]="{ exact: true }"
+        >
           <i class="fa-solid fa-house-chimney-window"></i>
           <span class="nav-title">Home</span>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" routerLink="/teachers" routerLinkActive="active">
           <i class="fa-solid fa-person-chalkboard"></i>
           <span class="nav-title">Teachers</span>
         </a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">
+        <a class="nav-link" routerLink="/schedules" routerLinkActive="active">
           <i class="fa-solid fa-calendar"></i>
           <span class="nav-title">Schedules</span>
         </a>

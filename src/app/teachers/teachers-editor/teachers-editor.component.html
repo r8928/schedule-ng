@@ -1,0 +1,68 @@
+<app-component-title
+  icon="fa-solid fa-person-chalkboard"
+  title="Add new teacher"
+></app-component-title>
+
+<form>
+  <div class="row">
+    <div class="offset-lg-3 col-lg-6">
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="name" placeholder="Name" />
+        <label for="name">Name</label>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input
+          type="text"
+          class="form-control"
+          id="qualification"
+          placeholder="Qualification"
+        />
+        <label for="qualification">Qualification</label>
+      </div>
+
+      <div class="row">
+        <div class="col-md-6">
+          <label>Classes</label>
+          <hr />
+          <div *ngFor="let class of classList">
+            <div class="form-check form-switch">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                role="switch"
+                [id]="class.key"
+              />
+              <label class="form-check-label" [for]="class.key">
+                {{ class.value }}</label
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <label>Subjects</label>
+          <hr />
+          <div *ngFor="let subject of subjectList">
+            <div class="form-check form-switch">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                role="switch"
+                [id]="subject.key"
+              />
+              <label class="form-check-label" [for]="subject.key">
+                {{ subject.value }}</label
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr />
+
+      <div class="tools-flex end">
+        <button class="btn btn-primary">Save</button>
+      </div>
+    </div>
+  </div>
+</form>
