@@ -19,3 +19,13 @@ export const Subjects = [
   { key: 'subject_soc', value: 'Social Studies' },
   { key: 'subject_isl', value: 'Islamiat' },
 ];
+
+export const Days = [
+  { key: 'day_mon', value: 'Monday' },
+  { key: 'day_tue', value: 'Tuesday' },
+  { key: 'day_wed', value: 'Wednesday' },
+  { key: 'day_thu', value: 'Thursday' },
+  { key: 'day_fri', value: 'Friday' },
+  { key: 'day_sat', value: 'Saturday' },
+  { key: 'day_sun', value: 'Sunday' },
+];

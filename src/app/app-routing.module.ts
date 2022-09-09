@@ -11,7 +11,11 @@ const routes: Routes = [
       import('./teachers/teachers.module').then((m) => m.TeachersModule),
   },
 
-const routes: Routes = [{ path: '', component: HomeComponent }];
+  {
+    path: 'schedules',
+    loadChildren: () =>
+      import('./schedules/schedules.module').then((m) => m.SchedulesModule),
+  },
 ];
 
 @NgModule({
