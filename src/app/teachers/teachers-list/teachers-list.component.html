@@ -17,4 +17,14 @@
     <th>Classes</th>
     <th>Subjects</th>
   </thead>
+
+  <tbody>
+    <tr *ngFor="let teacher of teachers">
+      <td [innerText]="teacher.id"></td>
+      <td [innerText]="teacher.name"></td>
+      <td [innerText]="teacher.qualifications"></td>
+      <td [innerText]="teacher.classes"></td>
+      <td [innerText]="teacher.subjects"></td>
+    </tr>
+  </tbody>
 </table>
