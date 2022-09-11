@@ -16,6 +16,8 @@ export class ApiService {
 
   getTeachers = () => this.http.get(this.baseUrl + 'teachers');
 
+  getTeachersDropdown = () => this.http.get(this.baseUrl + 'teachers/dropdown');
+
   getTeacher = (teacher_id: number) =>
     this.http.get(this.baseUrl + `teachers/${teacher_id}`);
 
