@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiService } from 'src/app/shared/api.service';
 
 @Component({
@@ -9,11 +10,15 @@ import { ApiService } from 'src/app/shared/api.service';
 export class TeachersListComponent implements OnInit {
   teachers: any[] = [];
 
-  constructor(private api: ApiService) {}
+  constructor(private api: ApiService, private router: Router) {}
 
   ngOnInit(): void {
     this.api.getTeachers().subscribe((res: any) => {
       this.teachers = res.data;
     });
+  }
+
+  edit(id: string) {
+    this.router.navigateByUrl('/teachers/' + id);
   }
 }

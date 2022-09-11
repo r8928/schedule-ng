@@ -19,7 +19,7 @@
   </thead>
 
   <tbody>
-    <tr *ngFor="let teacher of teachers">
+    <tr *ngFor="let teacher of teachers" (click)="edit(teacher.id)">
       <td [innerText]="teacher.id"></td>
       <td [innerText]="teacher.name"></td>
       <td [innerText]="teacher.qualifications"></td>

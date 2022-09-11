@@ -5,7 +5,7 @@ import { TeachersListComponent } from 'src/app/teachers/teachers-list/teachers-l
 
 const routes: Routes = [
   { path: '', component: TeachersListComponent },
-  { path: 'new', component: TeachersEditorComponent },
+  { path: ':id', component: TeachersEditorComponent },
 ];
 
 @NgModule({
