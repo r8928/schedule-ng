@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 
@@ -7,10 +7,15 @@ import { environment } from 'src/environments/environment';
 })
 export class ApiService {
   baseUrl = environment.baseUrl;
+  header = new HttpHeaders({
+    'Content-Type': 'application/json',
+    Accept: 'application/json',
+  });
 
   constructor(private http: HttpClient) {}
 
-  getTeachers() {
-    return this.http.get(this.baseUrl + 'teachers');
-  }
+  getTeachers = () => this.http.get(this.baseUrl + 'teachers');
+
+  createTeacher = (data: Record<string, any>) =>
+    this.http.post(this.baseUrl + 'teachers', data, { headers: this.header });
 }
